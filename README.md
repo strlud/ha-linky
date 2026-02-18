@@ -286,7 +286,7 @@ Si votre installation de Home Assistant ne vous permet pas d'accéder au systèm
 Construisez une image Docker `ha-linky` adaptée à votre système avec la commande suivante :
 
 ```sh
-docker build https://github.com/bokub/ha-linky.git -f standalone.Dockerfile -t ha-linky
+docker build https://github.com/strlud/ha-linky.git#electrical-data -f standalone.Dockerfile -t ha-linky
 ```
 
 Créez ensuite un fichier nommé `options.json`, au format suivant, puis suivez les instructions du paragraphe "Configuration" ci-dessus pour le remplir.

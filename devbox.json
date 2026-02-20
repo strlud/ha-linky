@@ -1,9 +1,16 @@
 {
   "packages": ["nodejs@18"],
   "shell": {
-    "init_hook": ["npm ci", "npm run build"],
+    "init_hook": ["npm ci"],
     "scripts": {
-      "run_test": "npm run start"
+      "run_test": "npm run start",
+      "build_ha_linky_electrical_data": [
+        "npm ci",
+        "cd node_modules && rm -rf linky && git clone -b electrical-data git@github.com:strlud/enedis-client.git linky",
+        "cd linky && npm ci && npm run build && cd ../.. && npm run build",
+        "cd node_modules/linky && rm -rf node_modules && cd ../..",
+        "docker build . -t ha-linky-electrical-data -f standalone.Dockerfile --no-cache --network host"
+      ]
     }
   }
 }

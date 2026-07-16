@@ -15,7 +15,7 @@
     "chalk": "^5.3.0",
     "csv-parse": "^5.5.3",
     "dayjs": "^1.11.9",
-    "linky": "^2.0.2",
+    "linky": "git+https://github.com/strlud/enedis-client.git#electrical-data",
     "node-cron": "^3.0.2",
     "websocket": "^1.0.34"
   },

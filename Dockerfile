@@ -10,9 +10,9 @@ RUN apk add --no-cache nodejs npm
 WORKDIR /linky
 
 # Install dependencies
-COPY package.json .
-COPY package-lock.json .
-RUN npm ci --ignore-scripts
+# COPY package.json .
+# COPY package-lock.json .
+# RUN npm ci --ignore-scripts
 
 # Copy add-on code
 COPY . .

@@ -2,15 +2,23 @@
 
 This is a fork from : []()
 
-## Hox to use ?
+## How to use ?
+
+### Create an account to MyElectricalData
+
+* Go to [MyElectricalData](https://www.myelectricaldata.fr/) and get your token
+* Update your docker [following the standalone installation](README.md#installation-standalone)
+
+### Build the image docker which use My Electrical Data
 
 * Install [devbox from jetity](https://www.jetify.com/docs/docs/devbox/installing-devbox)
 * clone this repository: `git clone https://github.com/strlud/ha-linky.git`
 * go to ha-linky: `cd ha-linky`
 * run devbox: `devbox shell`
 * build the docker image: `devbox run build_ha_linky_electrical_data`
-* All commands in once: `git clone https://github.com/strlud/ha-linky.git && cd ha-linky && devbox shell && devbox run build_ha_linky_electrical_data`
-* Edit your docker compose containing the "ha-linky" image and change from "ha-linky" to "ha-linky-electrical-data" : `image: ha-linky` to `image: ha-linky-electrical-data`
+* All commands in once: `git clone https://github.com/strlud/ha-linky.git && cd ha-linky && devbox shell && devbox run build_ha_linky_electrical_data` 
+* Edit your docker compose containing the "ha-linky" image and change from "ha-linky" to "ha-linky-electrical-data" : `image: ha-linky` to `image: ha-linky-electrical-data` [following the standalone installation](README.md#installation-standalone)
+
 
 # Home Assistant Linky Add-on
 
@@ -349,7 +357,7 @@ docker run -e SUPERVISOR_TOKEN='<jeton>' -e WS_URL='ws://<ha-ip>/api/websocket' 
 # docker-compose.yml
 services:
   ha-linky:
-    image: ha-linky
+    image: ha-linky-electrical-data
     environment:
       - SUPERVISOR_TOKEN=<jeton>
       - WS_URL=ws://<ha-ip>/api/websocket

@@ -1,3 +1,17 @@
+# Home Assistant Linky Add-on with "My electrical data"
+
+This is a fork from : []()
+
+## Hox to use ?
+
+* Install [devbox from jetity](https://www.jetify.com/docs/docs/devbox/installing-devbox)
+* clone this repository: `git clone https://github.com/strlud/ha-linky.git`
+* go to ha-linky: `cd ha-linky`
+* run devbox: `devbox shell`
+* build the docker image: `devbox run build_ha_linky_electrical_data`
+* All commands in once: `git clone https://github.com/strlud/ha-linky.git && cd ha-linky && devbox shell && devbox run build_ha_linky_electrical_data`
+* Edit your docker compose containing the "ha-linky" image and change from "ha-linky" to "ha-linky-electrical-data" : `image: ha-linky` to `image: ha-linky-electrical-data`
+
 # Home Assistant Linky Add-on
 
 [![Build Status](https://flat.badgen.net/github/checks/bokub/ha-linky?label=build)](https://github.com/bokub/ha-linky/actions/workflows/run.yml?query=branch%3Amaster)
